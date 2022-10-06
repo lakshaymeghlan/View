@@ -19,6 +19,7 @@ function Navbar() {
           <Link to="#" className="menu-bars">
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
+          <h2 style={{ color: "#f5f5f5", padding: "30px" }}>VIEW</h2>
           <Searchbar />
           <Upload />
         </div>
