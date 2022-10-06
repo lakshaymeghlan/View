@@ -4,8 +4,8 @@ import Navbar from "./Components/Navbar/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Like from "./Components/Like_video/Like";
-import Register from "./Components/Login_Signup/Register/Register";
-import Login from "./Components/Login_Signup/Login/Login";
+import Register from "./Components/Register/Register";
+import Login from "./Components/Login/Login";
 
 function App() {
   return (
