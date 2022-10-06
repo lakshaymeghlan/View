@@ -1,13 +1,13 @@
 import React from "react";
 
-function Home() {
+function Feedback() {
   return (
     <>
       <div>
-        <h1>Home</h1>
+        <h1>feedback</h1>
       </div>
     </>
   );
 }
 
-export default Home;
+export default Feedback;
