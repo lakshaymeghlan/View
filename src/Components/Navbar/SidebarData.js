@@ -6,25 +6,25 @@ import * as SiIcons from "react-icons/si";
 export const sidebarData = [
   {
     title: "Home",
-    path: "/Home",
+    path: "/",
     icons: <AiIcons.AiFillHome />,
     cName: "nav-text",
   },
   {
     title: "Liked Video",
-    path: "/Like",
+    path: "/like",
     icons: <AiIcons.AiFillLike />,
     cName: "nav-text",
   },
   {
     title: "LogIn/Register",
-    path: "/Register",
+    path: "/register",
     icons: <SiIcons.SiGnuprivacyguard />,
     cName: "nav-text",
   },
   {
     title: "Send feedback",
-    path: "/Feedback",
+    path: "/feedback",
     icons: <MdIcons.MdFeedback />,
     cName: "nav-text",
   },
