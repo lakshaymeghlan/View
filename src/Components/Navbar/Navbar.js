@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-// import * as GoIcons from "react-icons/go";
 import { sidebarData } from "./SidebarData";
 import "./Navbar.css";
 import { IconContext } from "react-icons";
 import Searchbar from "./Searchbar";
+import Upload from "./Upload";
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
@@ -19,12 +19,8 @@ function Navbar() {
           <Link to="#" className="menu-bars">
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
-
-          <FaIcons.FaCloudUploadAlt
-            style={{ color: "#f5f5f5", size: 70 }} //upload icon
-          />
-
           <Searchbar />
+          <Upload />
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>
