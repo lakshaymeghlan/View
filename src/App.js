@@ -7,6 +7,7 @@ import Like from "./Components/Like_video/Like";
 import Register from "./Components/Register/Register";
 import Login from "./Components/Login/Login";
 import Feedback from "./Components/Feedback/Feedback";
+import UploadVideo from "./Components/UploadVideo/UploadVideo";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/feedback" element={<Feedback />} />
+          <Route path="/uploadvideo" element={<UploadVideo />} />
         </Routes>
       </BrowserRouter>
     </>
