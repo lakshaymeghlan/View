@@ -1,28 +1,14 @@
 import React, { useState } from "react";
 import { Typography, Button, Form, Input } from "antd";
 import Dropzone from "react-dropzone";
+import * as AiIcons from "react-icons/ai";
 
 const { Title } = Typography;
 const { TextArea } = Input;
 
-const Private = [
-  { value: 0, label: "Private" },
-  { value: 1, label: "Public" },
-];
-
-const categories = [
-  { value: 0, label: "Film & Animation" },
-  { value: 0, label: "Autos & Vehicles" },
-  { value: 0, label: "Music" },
-  { value: 0, label: "Pets & Animals" },
-  { value: 0, label: "Sports" },
-];
-
 function UploadVideo() {
   const [title, setTitle] = useState("");
   const [Description, setDescription] = useState("");
-  const [privacy, setPrivacy] = useState(0);
-  const [Categories, setCategories] = useState("Film & Animation");
 
   const handleChangeTitle = (event) => {
     setTitle(event.currentTarget.value);
@@ -34,20 +20,15 @@ function UploadVideo() {
     setDescription(event.currentTarget.value);
   };
 
-  const handleChangeOne = (event) => {
-    setPrivacy(event.currentTarget.value);
-  };
-
-  const handleChangeTwo = (event) => {
-    setCategories(event.currentTarget.value);
-  };
-
   const onSubmit = () => {};
 
   return (
     <div style={{ maxWidth: "700px", margin: "2rem auto" }}>
       <div style={{ textAlign: "center", marginBottom: "2rem" }}>
-        <Title level={2}> Upload Video</Title>
+        <Title level={2} style={{ color: "#f5f5f5" }}>
+          {" "}
+          Upload Video
+        </Title>
       </div>
 
       <Form onSubmit={onSubmit}>
@@ -66,6 +47,7 @@ function UploadVideo() {
                 {...getRootProps()}
               >
                 <input {...getInputProps()} />
+                <AiIcons.AiOutlinePlus style={{ fontSize: "4rem" }} />
               </div>
             )}
           </Dropzone>
@@ -73,32 +55,25 @@ function UploadVideo() {
 
         <br />
         <br />
-        <label>Title</label>
-        <Input onChange={handleChangeTitle} value={title} />
-        <br />
-        <br />
-        <label>Description</label>
-        <TextArea onChange={handleChangeDecsription} value={Description} />
-        <br />
-        <br />
+        <label style={{ color: "#f5f5f5", "margin-left": "-0.5rem" }}>
+          Title
+        </label>
+        <Input
+          onChange={handleChangeTitle}
+          value={title}
+          style={{ "margin-left": "-0.5rem" }}
+        />
 
-        <select onChange={handleChangeOne}>
-          {Private.map((item, index) => (
-            <option key={index} value={item.value}>
-              {item.label}
-            </option>
-          ))}
-        </select>
-        <br />
-        <br />
+        <label style={{ color: "#f5f5f5", "margin-left": "-0.5rem" }}>
+          Description
+        </label>
+        <TextArea
+          onChange={handleChangeDecsription}
+          value={Description}
+          className="mytext_1"
+          style={{ "margin-left": "-0.5rem" }}
+        />
 
-        <select onChange={handleChangeTwo}>
-          {categories.map((item, index) => (
-            <option key={index} value={item.label}>
-              {item.label}
-            </option>
-          ))}
-        </select>
         <br />
         <br />
 
