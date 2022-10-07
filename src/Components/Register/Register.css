@@ -1,24 +1,54 @@
+.register-main{
+    min-height: 88.6vh;
+    min-width: 100vw;
+    background: linear-gradient(to right, #313131 50%, #202020 50%);
+
+}
+
 #link-signin{
     text-decoration: none;
     cursor: pointer;
-    color: grey;
+    color: #005198;
 }
 .form{
     display: flex;
     justify-content: center ;
-    background: rgba(236,236,236,0.7);
+    /* background: rgba(236,236,236,0.7); */
 }
 .body{    
     height: 100%;
     width: 60%;
-    box-shadow: 0rem 0rem 2rem 0.1rem grey;
+    /* box-shadow: 0rem 0rem 1rem 0rem grey; */
     margin: 2rem auto;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    background-color: #bbbaba;
+    border-radius: 1rem;
 }
 .container{
     height: 80%;
     width: 60%;
     margin: 2rem auto;
            
+}
+.bottom{
+    margin-left: 22rem;
+}
+
+#sub-btn-reg{
+    width: 35%;
+    background: #cfcccc;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    height: 6vh;
+    border-radius: 10%;
+    transition: all 0.3 ease;
+    margin-left: 18rem;
+    margin-bottom: 1.5rem;
+}
+
+#sub-btn-reg:hover{
+    box-shadow: 4px 3px 9px -1px grey;
+    transform: translateY(-1px);
 }

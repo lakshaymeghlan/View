@@ -6,6 +6,7 @@ import Home from "./Components/Home/Home";
 import Like from "./Components/Like_video/Like";
 import Register from "./Components/Register/Register";
 import Login from "./Components/Login/Login";
+import Feedback from "./Components/Feedback/Feedback";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/like" element={<Like />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/feedback" element={<Feedback />} />
         </Routes>
       </BrowserRouter>
     </>

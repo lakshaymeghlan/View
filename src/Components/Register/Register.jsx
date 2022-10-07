@@ -34,11 +34,7 @@ function Register(){
 
     return (
         <div className="register-main">
-            <div className="top">
-                    <h5>Already have an account?
-                    <Link id='link-signin' to='/login'> Sign in</Link>
-                    </h5>
-            </div>
+            
             <div className="form">                
                 <div className="body">
                     <form >
@@ -50,7 +46,7 @@ function Register(){
                         />
                         <label for='email'>Email :</label>
 
-                            <input placeholder="TTN Email-ID" 
+                            <input placeholder=" Email-ID" 
                                    type='email' 
                                    value={emailval} 
                                    onChange={(e)=>{setEmailval(e.target.value)}} 
@@ -68,8 +64,13 @@ function Register(){
                                    value={confirmpwdval} 
                                    onChange={(e)=>{setConfirmPwdval(e.target.value)}}
                             />
-                            <button type="submit" id='sub-btn' >Sign Up</button>
+                            <button type="submit" id='sub-btn-reg' >Sign Up</button>
                         </form>
+                        <div className="bottom">
+                    <h5>Already have an account?
+                    <Link id='link-signin' to='/login'> Sign in</Link>
+                    </h5>
+            </div>
                 </div>
                
             </div>            

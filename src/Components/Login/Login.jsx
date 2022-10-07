@@ -26,15 +26,9 @@ function Login(){
     const handleSubmit=(e)=>{
         e.preventDefault();
         if(emailval!=='' || pwdval!==''){
-            if (/@tothenew.com\s*$/.test(emailval)) {
                 LoginApiCall({"email":emailval,"password":pwdval},dispatch);
             setEmailval('');
-            setPwdval('');
-             }
-             else{
-                 alert('Kindly try again')
-             } 
-            
+            setPwdval('');     
         }
     }
 

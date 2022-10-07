@@ -18,7 +18,7 @@ export const sidebarData = [
   },
   {
     title: "LogIn/Register",
-    path: "/register",
+    path: "/login",
     icons: <SiIcons.SiGnuprivacyguard />,
     cName: "nav-text",
   },
