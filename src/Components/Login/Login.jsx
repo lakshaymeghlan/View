@@ -3,7 +3,6 @@ import './Login.css'
 import {Link} from 'react-router-dom';
 import { useState,useEffect,useRef } from "react";
 import logo from './logoPng.png';
-import signin from './signin.png';
 import {LoginApiCall} from '../ApiCall/LoginApiCall';
 import {useSelector, useDispatch} from 'react-redux'
 
@@ -33,7 +32,7 @@ function Login(){
             setPwdval('');
              }
              else{
-                 alert('You can only login with To The New email-ID. Kindly try again')
+                 alert('Kindly try again')
              } 
             
         }
@@ -49,7 +48,7 @@ function Login(){
                     <form onSubmit={handleSubmit}>
                       <label for='email1'>Email :</label>
 
-                        <input placeholder="TTN Email-ID" 
+                        <input placeholder="Email-ID" 
                                type='email' 
                                value={emailval} 
                                onChange={(e)=>{setEmailval(e.target.value)}} 
@@ -71,18 +70,6 @@ function Login(){
                         <h4>Don't have an account? <Link className="link" to='/register'>Sign Up Now</Link></h4>
                     </div>
 
-                </div>
-                <div className="right-side">
-                    <div className="welcomenote">
-                        <h3>Enter your details and Start your journey with us</h3>
-                        <h4 className="note">Don't stop until you are PROUD</h4>
-                    </div>
-                    <div className="signinImg">
-                        <img src={signin} id='signin_img' alt="" />
-                    </div>
-                    <div className="signin_google">
-                        <button className="google_btn">Sign in with Google</button>
-                    </div>
                 </div>
             </div>
             

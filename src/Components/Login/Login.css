@@ -5,27 +5,28 @@
     min-width: 100vw;
     overflow-x: hidden;
     color: #4dd6b6;
-    background: linear-gradient(to right, #313131 50%, #161616 50%);
+    background: linear-gradient(to right, #313131 50%, #202020 50%);
     /* background:#313131; */
 }
 
 .login-container{
     height: 75vh;
-    width: 70%;
-    background: linear-gradient(to right bottom, rgba(236,236,236,0.7), rgba(236,236,236,0.5));
+    width: 30%;
+    background: linear-gradient(#bbbaba, #bbbaba);
     border-radius: 1rem;
     margin: 2rem auto;
-    box-shadow: 0.5rem 0.5rem 2rem -1rem rgb(58,57,57);
+    /* box-shadow: 0.5rem 0.5rem 2rem -1rem rgb(255, 255, 255); */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .link{
     text-decoration: none;
-    color: #4d84d6;
+    color: #005198;
 }
 .footer{
-    color: black;
+    color: rgb(0, 0, 0);
+    margin-left: 4rem;
 }
 
 .left-side{
@@ -43,6 +44,7 @@
 #img-id{
     height: 65%;
     object-fit: cover;
+    margin-left: 10rem;
 }
 .right-side{
     margin: 2rem 2rem;
@@ -66,7 +68,7 @@ input{
     margin: auto;
     margin-bottom: 1.5rem;
     padding: 0.2rem 1rem;
-    color: grey;
+    color: rgb(0, 0, 0);
     transition: all 0.1s ease-in-out;
 }
 input:focus{
@@ -74,8 +76,8 @@ input:focus{
     border: none;
 }
 input:hover{
-    outline: 0.5px solid #4d84d6;
-    box-shadow: 2px 2px 9px -1px #4d84d6;
+    outline: 0.5px solid #252525;
+    box-shadow: 2px 2px 9px -1px #383636;
 }
 
 label{
@@ -84,19 +86,22 @@ label{
     width: 70%;
     margin: auto;
     font-size: small;
-    color: grey;
+    color: rgb(0, 0, 0);
     margin-bottom: 0.5rem;
+    
 }
 
 #sub-btn{
         width: 35%;
-        background: #4d84d6;
-        color: white;
+        background: #cfcccc;
+        color: rgb(0, 0, 0);
         border: none;
         cursor: pointer;
         height: 6vh;
         border-radius: 10%;
         transition: all 0.3 ease;
+        margin-left: 8rem;
+        margin-bottom: 2rem;
 }
 #sub-btn:hover{
     box-shadow: 4px 3px 9px -1px grey;
