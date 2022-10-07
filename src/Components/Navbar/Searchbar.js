@@ -12,7 +12,7 @@ function Searchbar() {
           placeholder="Search"
           aria-label="Search"
         ></input>
-        <FaIcons.FaSearch style={{ margin: "6px" }} />
+        <FaIcons.FaSearch className="search" />
       </div>
     </>
   );
