@@ -1,0 +1,31 @@
+.feedback{
+    background: linear-gradient(to right, #313131 50%, #202020 50%);
+    min-height: 88.6vh;
+    min-width: 100vw;
+    /* filter: blur(10px); */
+    
+}
+.feed-back{
+    height: 75vh;
+    /* filter: blur(8px); */
+    width: 30%;
+    background: linear-gradient(#514f4f, #514f4f);
+    opacity: 1;
+    border-radius: 1rem;
+    margin-left: 35rem;
+    /* margin: 2rem auto; */
+    /* box-shadow: 0.5rem 0.5rem 2rem -1rem rgb(255, 255, 255); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.field-half{
+    width: 30rem;
+}
+
+.mytext {
+    width: 300px;
+    height: 200px;
+    margin-left: 4.5rem;
+}

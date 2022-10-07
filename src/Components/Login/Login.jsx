@@ -57,7 +57,7 @@ function Login(){
                                id='pwd1'
                         />
 
-                        <button type="submit" id='sub-btn'>Sign in</button>
+                        <button className="button_rev" type="submit" >Sign in</button>
                     </form>
 
                     <div className="footer">

@@ -64,7 +64,7 @@ function Register(){
                                    value={confirmpwdval} 
                                    onChange={(e)=>{setConfirmPwdval(e.target.value)}}
                             />
-                            <button type="submit" id='sub-btn-reg' >Sign Up</button>
+                            <button className="button_rev_1" type="submit"  >Sign Up</button>
                         </form>
                         <div className="bottom">
                     <h5>Already have an account?
