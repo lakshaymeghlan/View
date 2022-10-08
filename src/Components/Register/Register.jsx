@@ -38,13 +38,13 @@ function Register(){
             <div className="form">                
                 <div className="body">
                     <form >
-                        <label for='username'>Enter your Name :</label>
+                        <label for='username'><h3>Enter your Name :</h3></label>
                         <input placeholder="Enter your name" 
                                type="text"
                                value={name}
                                onChange={(e)=>{setName(e.target.value)}} 
                         />
-                        <label for='email'>Email :</label>
+                        <label for='email'><h3>Email :</h3></label>
 
                             <input placeholder=" Email-ID" 
                                    type='email' 
@@ -52,13 +52,13 @@ function Register(){
                                    onChange={(e)=>{setEmailval(e.target.value)}} 
                             />
                         
-                        <label for='pwd1'>Password :</label>
+                        <label for='pwd1'><h3>Password :</h3></label>
                             <input placeholder="Password" 
                                    type="password" 
                                    value={pwdval} 
                                    onChange={(e)=>{setPwdval(e.target.value)}}
                             />
-                        <label for='confirmpwd1'>Confirm Password :</label>
+                        <label for='confirmpwd1'><h3>Confirm Password :</h3></label>
                             <input placeholder="Confirm password" 
                                    type="password" 
                                    value={confirmpwdval} 
@@ -67,9 +67,9 @@ function Register(){
                             <button className="button_rev_1" type="submit"  >Sign Up</button>
                         </form>
                         <div className="bottom">
-                    <h5>Already have an account?
+                    <h4>Already have an account?
                     <Link id='link-signin' to='/login'> Sign in</Link>
-                    </h5>
+                    </h4>
             </div>
                 </div>
                

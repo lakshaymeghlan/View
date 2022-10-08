@@ -11,14 +11,20 @@ function Feedback() {
             <form method="post" action="/">
               <div className="fields">
                 <div className="field-half">
-                  <label for="name">Name</label>
+                  <label for="name">
+                    <h3 style={{ color: "white" }}>Name</h3>
+                  </label>
                   <input type="text" name="name" id="name" />
                 </div>
                 <div className="field half">
-                  <label for="email">Email</label>
+                  <label for="email">
+                    <h3 style={{ color: "white" }}>Email</h3>
+                  </label>
                   <input type="text" name="email" id="email" />
                 </div>
-                <label for="message">Message</label>
+                <label for="message">
+                  <h3 style={{ color: "white" }}>Message</h3>
+                </label>
                 <textarea
                   name="message"
                   id="message"
@@ -26,9 +32,13 @@ function Feedback() {
                 ></textarea>
               </div>
               <ul className="actions">
-                <input type="submit" value="Send Message" />
+                <input
+                  className="button_rev_fed"
+                  type="submit"
+                  value="Send Message"
+                />
 
-                <input type="reset" value="Reset" />
+                <input className="button_rev_fed" type="reset" value="Reset" />
               </ul>
             </form>
           </div>

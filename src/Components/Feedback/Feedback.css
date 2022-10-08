@@ -1,20 +1,16 @@
 .feedback{
-    background: linear-gradient(to right, #313131 50%, #202020 50%);
-    min-height: 88.6vh;
+    min-height: 80vh;
     min-width: 100vw;
-    /* filter: blur(10px); */
+    margin-top: 2rem;
     
 }
 .feed-back{
     height: 75vh;
-    /* filter: blur(8px); */
     width: 30%;
     background: linear-gradient(#514f4f, #514f4f);
     opacity: 1;
     border-radius: 1rem;
     margin-left: 35rem;
-    /* margin: 2rem auto; */
-    /* box-shadow: 0.5rem 0.5rem 2rem -1rem rgb(255, 255, 255); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,3 +25,25 @@
     height: 200px;
     margin-left: 4.5rem;
 }
+.button_rev_fed{
+    background-color: #376f70;
+    border-radius: 100px;
+    /* box-shadow: rgba(44, 187, 111, 0.2) 0 -25px 18px -14px inset,rgba(44, 187, 111, 0.2) 0 1px 2px,rgba(44, 187, 111, 0.2) 0 2px 4px,rgba(44, 187, 111, 0.2) 0 4px 8px,rgba(44, 187, 111, 0.2) 0 8px 16px,rgba(44, 187, 111, 0.2) 0 16px 32px; */
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    /* display: inline-block; */
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    margin-left: 9rem;
+    margin-top: 1rem;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-right: 2rem;
+    /* margin-bottom: 3rem; */
+    width: 10rem;
+  }

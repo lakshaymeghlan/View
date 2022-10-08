@@ -40,7 +40,7 @@ function Login(){
                         <img src={logo} id="img-id" alt="" />
                     </div>
                     <form onSubmit={handleSubmit}>
-                      <label for='email1'>Email :</label>
+                      <label for='email1'><h3>Email :</h3></label>
 
                         <input placeholder="Email-ID" 
                                type='email' 
@@ -49,7 +49,7 @@ function Login(){
                                id='email1'
                         />
                       
-                      <label for='pwd1'>Password :</label>
+                      <label for='pwd1'><h3>Password :</h3></label>
                         <input placeholder="Password" 
                                type="password" 
                                value={pwdval} 

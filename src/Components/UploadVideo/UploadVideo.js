@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Typography, Button, Form, Input } from "antd";
 import Dropzone from "react-dropzone";
 import * as AiIcons from "react-icons/ai";
+import "./UploadVideo.css";
 
 const { Title } = Typography;
 const { TextArea } = Input;
@@ -77,7 +78,12 @@ function UploadVideo() {
         <br />
         <br />
 
-        <Button type="primary" size="large" onClick={onSubmit}>
+        <Button
+          className="button_rev_"
+          type="primary"
+          size="large"
+          onClick={onSubmit}
+        >
           Submit
         </Button>
       </Form>
