@@ -3,6 +3,7 @@ import { Typography, Button, Form, Input } from "antd";
 import Dropzone from "react-dropzone";
 import * as AiIcons from "react-icons/ai";
 import "./UploadVideo.css";
+import { mediaCreateApi } from "../ApiCall/MediaApiCall";
 
 const { Title } = Typography;
 const { TextArea } = Input;
@@ -82,7 +83,7 @@ function UploadVideo() {
           className="button_rev_"
           type="primary"
           size="large"
-          onClick={onSubmit}
+          onClick={() => mediaCreateApi()}
         >
           Submit
         </Button>
