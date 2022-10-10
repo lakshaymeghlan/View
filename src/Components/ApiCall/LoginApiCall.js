@@ -1,14 +1,30 @@
-import axios from 'axios';
-import {startlogin,successlogin,failedlogin} from '../Actions/Actions'
+import axios from "axios";
 
-export const LoginApiCall=async(userCredentials,dispatch)=>{
-dispatch(startlogin());
-    try{
-        const user = await axios.post('http://localhost:5000/api/auth/login',userCredentials);
-        dispatch(successlogin(user.data));
-        console.log(user.data);
-    }catch(error){
-        dispatch(failedlogin(error));
-        console.log('Error',error);
-    }
-}
+const loginApiCall = async () => {
+  const loginApiCall = await axios
+    .get("http://localhost:8080/auth/register")
+    .then((res) => {
+      return res;
+    });
+  return loginApiCall;
+};
+
+const registerApiCall = async () => {
+  const registerApiCall = await axios
+    .get("http://localhost:8080/auth/login-user")
+    .then((res) => {
+      return res;
+    });
+  return registerApiCall;
+};
+
+const userApiCall = async () => {
+  const userApiCall = await axios
+    .get("http://localhost:8080/auth/userData")
+    .then((res) => {
+      return res;
+    });
+  return userauth;
+};
+
+export default loginApiCall;
