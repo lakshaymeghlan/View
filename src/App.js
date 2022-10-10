@@ -8,6 +8,7 @@ import Register from "./Components/Register/Register";
 import Login from "./Components/Login/Login";
 import Feedback from "./Components/Feedback/Feedback";
 import UploadVideo from "./Components/UploadVideo/UploadVideo";
+import ViewVideo from "./Components/ViewVideo/ViewVideo";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/feedback" element={<Feedback />} />
           <Route path="/uploadvideo" element={<UploadVideo />} />
+          <Route path="/viewvideo/:id" element={<ViewVideo />} />
         </Routes>
       </BrowserRouter>
     </>
