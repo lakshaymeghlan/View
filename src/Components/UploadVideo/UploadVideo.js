@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { Typography, Button, Form, Input } from "antd";
+import React, { useState, useEffect } from "react";
+import { Typography, Button, Input } from "antd";
 import Dropzone from "react-dropzone";
 import * as AiIcons from "react-icons/ai";
 import "./UploadVideo.css";
-import { mediaCreateApi } from "../ApiCall/MediaApiCall";
+import { mediaCreateApi, getMediaApi } from "../ApiCall/MediaApiCall";
 
 const { Title } = Typography;
 const { TextArea } = Input;
@@ -11,6 +11,7 @@ const { TextArea } = Input;
 function UploadVideo() {
   const [title, setTitle] = useState("");
   const [Description, setDescription] = useState("");
+  const [Video, setVideo] = useState("");
 
   const handleChangeTitle = (event) => {
     setTitle(event.currentTarget.value);
@@ -22,7 +23,10 @@ function UploadVideo() {
     setDescription(event.currentTarget.value);
   };
 
-  const onSubmit = () => {};
+  // useEffect(() => {
+  //   const get = getMediaApi();
+  //   console.log(get);
+  // }, []);
 
   return (
     <div style={{ maxWidth: "700px", margin: "2rem auto" }}>
@@ -33,9 +37,8 @@ function UploadVideo() {
         </Title>
       </div>
 
-      <Form onSubmit={onSubmit}>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <Dropzone multiple={false} maxSize={800000000}>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        {/* <Dropzone multiple={false} maxSize={800000000}>
             {({ getRootProps, getInputProps }) => (
               <div
                 style={{
@@ -52,42 +55,49 @@ function UploadVideo() {
                 <AiIcons.AiOutlinePlus style={{ fontSize: "4rem" }} />
               </div>
             )}
-          </Dropzone>
-        </div>
-
-        <br />
-        <br />
-        <label style={{ color: "#f5f5f5", "margin-left": "-0.5rem" }}>
-          Title
-        </label>
-        <Input
-          onChange={handleChangeTitle}
-          value={title}
-          style={{ "margin-left": "-0.5rem" }}
+          </Dropzone> */}
+        <input
+          type="file"
+          name="upload"
+          onChange={(e) => {
+            console.log(e.target.files[0]);
+            setVideo(e.target.files);
+          }}
         />
+      </div>
 
-        <label style={{ color: "#f5f5f5", "margin-left": "-0.5rem" }}>
-          Description
-        </label>
-        <TextArea
-          onChange={handleChangeDecsription}
-          value={Description}
-          className="mytext_1"
-          style={{ "margin-left": "-0.5rem" }}
-        />
+      <br />
+      <br />
+      <label style={{ color: "#f5f5f5", "margin-left": "-0.5rem" }}>
+        Title
+      </label>
+      <Input
+        onChange={handleChangeTitle}
+        // value={title}
+        style={{ "margin-left": "-0.5rem" }}
+      />
 
-        <br />
-        <br />
+      <label style={{ color: "#f5f5f5", "margin-left": "-0.5rem" }}>
+        Description
+      </label>
+      <TextArea
+        onChange={handleChangeDecsription}
+        // value={Description}
+        className="mytext_1"
+        style={{ "margin-left": "-0.5rem" }}
+      />
 
-        <Button
-          className="button_rev_"
-          type="primary"
-          size="large"
-          onClick={() => mediaCreateApi()}
-        >
-          Submit
-        </Button>
-      </Form>
+      <br />
+      <br />
+
+      <Button
+        className="button_rev_"
+        type="primary"
+        size="large"
+        onClick={() => mediaCreateApi(title, Description, Video)}
+      >
+        Submit
+      </Button>
     </div>
   );
 }
