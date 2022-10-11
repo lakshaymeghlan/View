@@ -25,11 +25,11 @@ export const getMediaApi = async () => {
   return getMediaApi;
 };
 
-export const getSingleApi = async () => {
+export const getSingleApi = async (id) => {
   const getSingleApi = await axios
     .get(`http://localhost:8000/media/get/${id}`)
     .then((res) => {
-      return res;
+      console.log(res.data);
     });
   return getSingleApi;
 };
