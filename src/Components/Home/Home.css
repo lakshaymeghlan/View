@@ -10,10 +10,17 @@
     text-decoration: none;
 }
 .home_video{
-    /* width: 375px; */
-   padding: 2rem;
-    /* height: 240px; */
+
     border: none;
     max-width: 100%;
     height: auto;
+}
+
+.video_contain{
+    margin-bottom: 20rem;
+    border-style: groove;
+    margin-left:3.5rem;
+    color: #376f70;
+    
+   
 }

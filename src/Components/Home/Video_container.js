@@ -4,12 +4,14 @@ import "./Home.css";
 
 function Video_container({ id, name, video }) {
   return (
-    <div>
+    <div className="card video_contain">
+      <iframe className=" card-img-top home_video" src={video}></iframe>
       <Link to={`/viewvideo/${id}`}>
-        <h1 className="home_name" style={{ fontSize: "2rem" }}>
-          {name}
-        </h1>
-        <iframe className="home_video" src={video}></iframe>
+        <div className="card-title">
+          <h1 className="home_name" style={{ fontSize: "2rem" }}>
+            {name}
+          </h1>
+        </div>
       </Link>
     </div>
   );

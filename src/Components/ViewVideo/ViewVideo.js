@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import "./ViewVideo.css";
+// import * as SlIcons from "react-icons/Sl";
+import * as AiIcons from "react-icons/ai";
+import * as RiIcons from "react-icons/ri";
 
 function ViewVideo() {
   const [data, setData] = useState();
@@ -19,12 +23,36 @@ function ViewVideo() {
     <>
       {data ? (
         <>
-          <div>{data.name}</div>
-          <iframe src={data.videos}></iframe>
+          <div className="card view_video_contain">
+            <iframe
+              className="card-img-top home_video_view"
+              src={data.videos}
+            ></iframe>
+          </div>
+          <div style={{ color: "#f5f5f5" }}>
+            {/* <h1>{data.name}</h1> */}
+          </div>
         </>
       ) : (
         ""
       )}
+      <div>
+        <AiIcons.AiOutlineLike
+          className="like_icons"
+          style={{ color: "#376f70" }}
+          size={50}
+        />
+        <AiIcons.AiOutlineDislike
+          className="like_icons"
+          style={{ color: "#376f70" }}
+          size={50}
+        />
+        <RiIcons.RiShareForwardLine
+          className="like_icons"
+          style={{ color: "#376f70" }}
+          size={50}
+        />
+      </div>
     </>
   );
 }
