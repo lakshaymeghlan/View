@@ -24,3 +24,12 @@ export const getMediaApi = async () => {
     });
   return getMediaApi;
 };
+
+export const getSingleApi = async () => {
+  const getSingleApi = await axios
+    .get(`http://localhost:8000/media/get/${id}`)
+    .then((res) => {
+      return res;
+    });
+  return getSingleApi;
+};
