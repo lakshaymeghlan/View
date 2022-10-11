@@ -1,30 +1,33 @@
 import axios from "axios";
 
-const loginApiCall = async () => {
+export const loginApiCall = async (userCredentials) => {
   const loginApiCall = await axios
-    .get("http://localhost:8080/auth/register")
+    .post("http://localhost:8000/auth/login", userCredentials)
     .then((res) => {
-      return res;
+      const user = res.data.user;
+      const userData = {
+        name: user.username,
+        email: user.email,
+      };
+      localStorage.setItem("user", JSON.stringify(userData));
     });
   return loginApiCall;
 };
 
-const registerApiCall = async () => {
-  const registerApiCall = await axios
-    .get("http://localhost:8080/auth/login-user")
-    .then((res) => {
-      return res;
-    });
-  return registerApiCall;
+export const registerApiCall = async (userCredentials) => {
+  console.log(userCredentials);
+  try {
+    await axios.post("http://localhost:8000/auth/register", userCredentials);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
-const userApiCall = async () => {
-  const userApiCall = await axios
-    .get("http://localhost:8080/auth/userData")
-    .then((res) => {
-      return res;
-    });
-  return userauth;
-};
-
-export default loginApiCall;
+// export const userApiCall = async () => {
+//   const userApiCall = await axios
+//     .get("http://localhost:8080/auth/userData")
+//     .then((res) => {
+//       return res;
+//     });
+//   return userApiCall;
+// };

@@ -2,7 +2,7 @@ import React from "react";
 import './Register.css'
 import {Link} from 'react-router-dom';
 import {useState} from 'react'
-import {RegisterApiCall} from '../ApiCall/RegisterApiCall';
+import {registerApiCall} from '../ApiCall/LoginApiCall';
 
 function Register(){
 
@@ -16,7 +16,7 @@ function Register(){
         if(name!=='' ||emailval!=='' ||pwdval!==''||confirmpwdval!==''){
            
                 if(pwdval===confirmpwdval){
-                    RegisterApiCall({"username":name,"email":emailval,"password":pwdval})
+                    registerApiCall({"username":name,"email":emailval,"password":pwdval})
                     setName('');
                     setEmailval('');
                     setPwdval('');
@@ -64,7 +64,7 @@ function Register(){
                                    value={confirmpwdval} 
                                    onChange={(e)=>{setConfirmPwdval(e.target.value)}}
                             />
-                            <button className="button_rev_1" type="submit"  >Sign Up</button>
+                            <button onClick={handleSubmit} className="button_rev_1" type="submit"  >Sign Up</button>
                         </form>
                         <div className="bottom">
                     <h4>Already have an account?

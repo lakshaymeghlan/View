@@ -1,15 +1,17 @@
 import React from "react";
 import './Login.css'
-import {Link} from 'react-router-dom';
+import {Link,useNavigate} from 'react-router-dom';
 import { useState,useEffect,useRef } from "react";
 import logo from './logoPng.png';
-import {LoginApiCall} from '../ApiCall/LoginApiCall';
+// import {LoginApiCall} from '../ApiCall/LoginApiCall';
 import {useSelector, useDispatch} from 'react-redux'
+import {loginApiCall} from '../ApiCall/LoginApiCall'
 
 function Login(){
 
+    const navigate = useNavigate()
+
     const state = useSelector(state =>state.UserReducer);
-    const dispatch = useDispatch();
     const initialValue = useRef(true);
     useEffect(()=>{
         if(!initialValue.current){
@@ -26,10 +28,11 @@ function Login(){
     const handleSubmit=(e)=>{
         e.preventDefault();
         if(emailval!=='' || pwdval!==''){
-                LoginApiCall({"email":emailval,"password":pwdval},dispatch);
+                loginApiCall({"email":emailval,"password":pwdval})
             setEmailval('');
             setPwdval('');     
         }
+        navigate("/")
     }
 
     return (
@@ -57,7 +60,7 @@ function Login(){
                                id='pwd1'
                         />
 
-                        <button className="button_rev" type="submit" >Sign in</button>
+                        <button onClick={handleSubmit} className="button_rev" type="submit" >Sign in</button>
                     </form>
 
                     <div className="footer">
