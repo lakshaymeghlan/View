@@ -79,8 +79,8 @@ function Login(){
         <div className="main-login">
             <div className="login-container">
                 <div className="left-side">
-                    <div className="img-class" style={{width:"9rem",height:"9rem" }}>
-                        <img src={logo} id="img-id" alt="" />
+                    <div className="img-class" style={{width:"8rem",height:"8rem" }}>
+                        <img  src={logo} id="img-id" alt="" />
                     </div>
                     <form onSubmit={handleSubmit}>
                       <label for='email1'><h3>Email :</h3></label>
@@ -107,7 +107,7 @@ function Login(){
                         <h4>Don't have an account? <Link className="link" to='/register'>Sign Up Now</Link></h4>
                     </div>
 
-                    <button onClick={loginWithGoogle}>Login with google</button>
+                    <button className="button_rev_go" onClick={loginWithGoogle}>Login with google</button>
 
 
 
