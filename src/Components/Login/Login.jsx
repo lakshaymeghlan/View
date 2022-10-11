@@ -3,13 +3,53 @@ import './Login.css'
 import {Link,useNavigate} from 'react-router-dom';
 import { useState,useEffect,useRef } from "react";
 import logo from './logoPng.png';
-// import {LoginApiCall} from '../ApiCall/LoginApiCall';
 import {useSelector, useDispatch} from 'react-redux'
 import {loginApiCall} from '../ApiCall/LoginApiCall'
+import axios from "axios";
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import "../../Firebase_Config";
 
 function Login(){
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+    const loginWithGoogle = async () => {
+      try {
+        const provider = new GoogleAuthProvider();
+        const auth = getAuth();
+        const result = await signInWithPopup(auth, provider);
+  
+        const user = result.user;
+  
+        const userData = {
+          name: user.displayName,
+          email: user.email,
+          userImage: user.photoURL,
+          google: true,
+          moderator: false,
+          password: "##)@*!%@",
+        };
+  
+        try {
+          await axios.post("http://localhost:8000/auth/register", userData);
+        } catch (err) {
+          // eslint-disable-next-line no-console
+          console.log(err);
+        }
+  
+        localStorage.setItem("user", JSON.stringify(userData));
+  
+        navigate("/home");
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.log(`Error ${error}`);
+      }
+    };
+  
+
+
+
+
 
     const state = useSelector(state =>state.UserReducer);
     const initialValue = useRef(true);
@@ -66,6 +106,10 @@ function Login(){
                     <div className="footer">
                         <h4>Don't have an account? <Link className="link" to='/register'>Sign Up Now</Link></h4>
                     </div>
+
+                    <button onClick={loginWithGoogle}>Login with google</button>
+
+
 
                 </div>
             </div>
