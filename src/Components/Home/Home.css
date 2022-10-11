@@ -1,0 +1,19 @@
+.home{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.home_name{
+    padding: 2rem;
+    text-decoration: none;
+    border: none;
+    text-decoration: none;
+}
+.home_video{
+    /* width: 375px; */
+   padding: 2rem;
+    /* height: 240px; */
+    border: none;
+    max-width: 100%;
+    height: auto;
+}

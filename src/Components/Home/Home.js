@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 // import { getMediaApi } from "../ApiCall/MediaApiCall";
 import axios from "axios";
 import Video_container from "./Video_container";
+import "./Home.css";
 
 function Home() {
   const [Data, setData] = useState([]);
@@ -15,7 +16,7 @@ function Home() {
 
   return (
     <>
-      <div>
+      <div className="home">
         {Data.reverse().map((video) => {
           return (
             <Video_container
