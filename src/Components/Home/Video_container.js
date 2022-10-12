@@ -21,9 +21,12 @@ function Video_container({ id, name, video, date, img, userName }) {
             {name}
           </h1>
         </Link>
-        <div className="avatar">
-          <Avatar alt="L" src={img} />
-        </div>
+
+        <Link to={`/profile`}>
+          <div className="avatar">
+            <Avatar alt="L" src={img} />
+          </div>
+        </Link>
         <div>
           <h6 className="date_format" style={{ marginBottom: "2rem" }}>
             {moment(date).format("lll")} <br />
