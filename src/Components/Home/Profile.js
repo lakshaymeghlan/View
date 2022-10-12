@@ -1,46 +1,50 @@
 import React from "react";
+import CardMedia from "@mui/material/CardMedia";
+import Card from "@mui/material/Card";
+import Avatar from "@mui/material/Avatar";
+import * as AiIcons from "react-icons/ai";
 import "./Profile.css";
 
-function Profile() {
+function Profile({ img, name }) {
+  console.log(img);
   return (
-    <div>
-      {/* <h1 style={{ color: "#f5f5f5" }}>profile</h1> */}
-      <section className="channel-info">
-        <div className="container">
-          <div className="channel-icon">
-            {/* <img
-              src="https://images.unsplash.com/photo-1467912681710-2a73a89d88d6?w=80&h=80&fit=crop"
-              alt=""
-            /> */}
-          </div>
-
-          <div className="channel-title">
-            <h1>
-              Lakshay Meghlan <i className="fas fa-check-circle"></i>
-            </h1>
-          </div>
-        </div>
-      </section>
-
-      <nav className="channel-nav">
-        <div className="container">
-          <ul>
-            <li className="nav-item">
-              <a href="#" className="current">
-                Home
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a href="#">Videos</a>
-            </li>
-            <li className="nav-item">
-              <a href="#">About</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+    <>
+      <Card sx={{ maxWidth: 2000 }}>
+        <CardMedia
+          className="profile_card"
+          component="img"
+          height="140"
+          display="flex"
+          image="../public/222.png"
+          alt="banner"
+        />
+      </Card>
+      <Avatar
+        className="profile_avatar"
+        style={{ marginLeft: "40rem", width: "10rem", height: "10rem" }}
+        alt="L"
+        src={img}
+      />
+      <h1
+        className="home_name"
+        style={{
+          fontSize: "1.5rem",
+          color: "#f5f5f5",
+        }}
+      >
+        {name}
+      </h1>
+      <div className="container">
+        <AiIcons.AiOutlineVideoCamera
+          style={{
+            color: "#376f70",
+            width: "4rem",
+            height: "4rem",
+          }}
+        />
+        <h1 style={{ color: "#f5f5f5" }}>Videos :</h1>
+      </div>
+    </>
   );
 }
 

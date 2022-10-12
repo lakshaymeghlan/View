@@ -18,7 +18,6 @@ function Home() {
     <>
       <div className="home">
         {Data.reverse().map((video) => {
-          console.log(video.img);
           return (
             <>
               <Video_container

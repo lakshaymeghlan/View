@@ -12,11 +12,12 @@
 }
 
 .video_contain{
-    height: 250px;
+    height: 260px;
     width: 20vw;
     text-decoration: none;
-    /* border-style: groove; */
-    /* border-color: #376f70; */
+    /* border-style: groove;  */
+    /* border-color: #1e1e1e;
+    background-color: #1e1e1e; */
     margin-left:3.5rem;
     color: #376f70;
  

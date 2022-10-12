@@ -9,13 +9,12 @@ function Video_container({ id, name, video, date, img, userName }) {
     <div className="card video_contain">
       <iframe className=" card-img-top home_video" src={video}></iframe>
       <div className="card-title">
-        <Link to={`/viewvideo/${id}`}>
+        <Link to={`/viewvideo/${id}`} style={{ textDecoration: "none" }}>
           <h1
             className="home_name"
             style={{
               fontSize: "1.5rem",
               color: "#f5f5f5",
-              textDecoration: "none",
             }}
           >
             {name}
