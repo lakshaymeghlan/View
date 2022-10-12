@@ -18,13 +18,17 @@ function Home() {
     <>
       <div className="home">
         {Data.reverse().map((video) => {
+          console.log(video.img);
           return (
             <>
               <Video_container
                 key={video._id}
                 id={video._id}
                 name={video.name}
+                date={video.createdAt}
+                img={video.img}
                 video={video.videos[0]}
+                userName={video.userName}
               />
             </>
           );
