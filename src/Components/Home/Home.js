@@ -19,12 +19,14 @@ function Home() {
       <div className="home">
         {Data.reverse().map((video) => {
           return (
-            <Video_container
-              key={video._id}
-              id={video._id}
-              name={video.name}
-              video={video.videos[0]}
-            />
+            <>
+              <Video_container
+                key={video._id}
+                id={video._id}
+                name={video.name}
+                video={video.videos[0]}
+              />
+            </>
           );
         })}
       </div>

@@ -39,7 +39,7 @@ function Login(){
   
         localStorage.setItem("user", JSON.stringify(userData));
   
-        navigate("/home");
+        navigate("/");
       } catch (error) {
         // eslint-disable-next-line no-console
         console.log(`Error ${error}`);
