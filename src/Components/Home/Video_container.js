@@ -8,9 +8,8 @@ function Video_container({ id, name, video, date, img, userName }) {
   return (
     <div className="card video_contain">
       <iframe className=" card-img-top home_video" src={video}></iframe>
-      <Link to={`/viewvideo/${id}`}>
-        <div className="card-title">
-          <Avatar alt="L" src={img} />
+      <div className="card-title">
+        <Link to={`/viewvideo/${id}`}>
           <h1
             className="home_name"
             style={{
@@ -21,9 +20,17 @@ function Video_container({ id, name, video, date, img, userName }) {
           >
             {name}
           </h1>
-          {moment(date).format("lll")} by: {userName}
+        </Link>
+        <div className="avatar">
+          <Avatar alt="L" src={img} />
         </div>
-      </Link>
+        <div>
+          <h6 className="date_format" style={{ marginBottom: "2rem" }}>
+            {moment(date).format("lll")} <br />
+            by: {userName}
+          </h6>
+        </div>
+      </div>
     </div>
   );
 }

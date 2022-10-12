@@ -15,9 +15,25 @@
     height: 250px;
     width: 20vw;
     text-decoration: none;
-    border-style: groove;
-    border-color: #376f70;
+    /* border-style: groove; */
+    /* border-color: #376f70; */
     margin-left:3.5rem;
     color: #376f70;
  
+}
+
+.avatar{
+    padding-top:1rem;
+    width:20px;
+    height:20px;
+}
+
+.date_format{
+    display: flex;
+   /* width:28rem; */
+   height:16rem;
+   padding-left: 3rem;
+   font-size: 15px;
+   color: #f5f5f5f5;
+   text-decoration: none;
 }
