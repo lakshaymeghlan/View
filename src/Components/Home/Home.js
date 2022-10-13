@@ -17,7 +17,7 @@ function Home() {
   return (
     <>
       <div className="home">
-        {Data.reverse().map((video) => {
+        {Data.map((video) => {
           return (
             <>
               <Video_container

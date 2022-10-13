@@ -6,18 +6,22 @@ import * as AiIcons from "react-icons/ai";
 import "./Profile.css";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import imagebanner from "./222.png";
+import Video_container from "./Video_container";
 
 function Profile() {
   const params = useParams();
 
   const [data, setData] = useState([]);
+  const [userImage, setUserImage] = useState("");
 
   useEffect(() => {
     const getData = async () => {
       const response = await axios.get(
         `http://localhost:8000/media/getByUser/${params.id}`
       );
-      setData(response.data);
+      setUserImage(response.data.userImage);
+      setData(response.data.data);
     };
     getData();
   }, []);
@@ -31,7 +35,7 @@ function Profile() {
           component="img"
           height="140"
           display="flex"
-          image="../public/222.png"
+          image={imagebanner}
           alt="banner"
         />
       </Card>
@@ -39,17 +43,17 @@ function Profile() {
         className="profile_avatar"
         style={{ marginLeft: "40rem", width: "10rem", height: "10rem" }}
         alt="L"
-        src={"/"}
+        src={userImage}
       />
-      <h1
+      {/* <h1
         className="home_name"
         style={{
           fontSize: "1.5rem",
           color: "#f5f5f5",
         }}
       >
-        lakshay
-      </h1>
+      
+      </h1> */}
       <div className="container">
         <AiIcons.AiOutlineVideoCamera
           style={{
@@ -59,6 +63,22 @@ function Profile() {
           }}
         />
         <h1 style={{ color: "#f5f5f5" }}>Videos :</h1>
+        <hr />
+        {data.map((video) => {
+          return (
+            <>
+              <Video_container
+                key={video._id}
+                id={video._id}
+                name={video.name}
+                date={video.createdAt}
+                img={video.img}
+                video={video.videos[0]}
+                userName={video.userName}
+              />
+            </>
+          );
+        })}
       </div>
     </>
   );
