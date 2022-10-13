@@ -45,3 +45,12 @@ export const getSingleApi = async (id) => {
     });
   return getSingleApi;
 };
+
+// export const getByUser = async () => {
+//   const getByUser = await axios
+//     .get(`http://localhost:8000/media/getByUser`)
+//     .then((res) => {
+//       console.log(res.data);
+//     });
+//   return getByUser;
+// };

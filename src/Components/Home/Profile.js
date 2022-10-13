@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CardMedia from "@mui/material/CardMedia";
 import Card from "@mui/material/Card";
 import Avatar from "@mui/material/Avatar";
 import * as AiIcons from "react-icons/ai";
 import "./Profile.css";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
-function Profile({ img, name }) {
-  console.log(img);
+function Profile() {
+  const params = useParams();
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const response = await axios.get(
+        `http://localhost:8000/media/getByUser/${params.id}`
+      );
+      setData(response.data);
+    };
+    getData();
+  }, []);
+  console.log(data);
+
   return (
     <>
       <Card sx={{ maxWidth: 2000 }}>
@@ -23,7 +39,7 @@ function Profile({ img, name }) {
         className="profile_avatar"
         style={{ marginLeft: "40rem", width: "10rem", height: "10rem" }}
         alt="L"
-        src={img}
+        src={"/"}
       />
       <h1
         className="home_name"
@@ -32,7 +48,7 @@ function Profile({ img, name }) {
           color: "#f5f5f5",
         }}
       >
-        {name}
+        lakshay
       </h1>
       <div className="container">
         <AiIcons.AiOutlineVideoCamera

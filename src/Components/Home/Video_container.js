@@ -1,10 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 import Avatar from "@mui/material/Avatar";
 import moment from "moment";
 
 function Video_container({ id, name, video, date, img, userName }) {
+  // const abcd = () => {
+  //   console.log("mai chal gaya");
+  // };
+
+  const navigate = useNavigate();
+
   return (
     <div className="card video_contain">
       <iframe className=" card-img-top home_video" src={video}></iframe>
@@ -21,7 +27,7 @@ function Video_container({ id, name, video, date, img, userName }) {
           </h1>
         </Link>
 
-        <Link to={`/profile`}>
+        <Link to={`/profile/${id}`}>
           <div className="avatar">
             <Avatar alt="L" src={img} />
           </div>

@@ -24,7 +24,7 @@ function App() {
           <Route path="/feedback" element={<Feedback />} />
           <Route path="/uploadvideo" element={<UploadVideo />} />
           <Route path="/viewvideo/:id" element={<ViewVideo />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile/:id" element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </>
