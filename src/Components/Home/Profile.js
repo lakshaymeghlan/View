@@ -45,15 +45,7 @@ function Profile() {
         alt="L"
         src={userImage}
       />
-      {/* <h1
-        className="home_name"
-        style={{
-          fontSize: "1.5rem",
-          color: "#f5f5f5",
-        }}
-      >
-      
-      </h1> */}
+
       <div className="container">
         <AiIcons.AiOutlineVideoCamera
           style={{
@@ -63,22 +55,25 @@ function Profile() {
           }}
         />
         <h1 style={{ color: "#f5f5f5" }}>Videos :</h1>
-        <hr />
-        {data.map((video) => {
-          return (
-            <>
-              <Video_container
-                key={video._id}
-                id={video._id}
-                name={video.name}
-                date={video.createdAt}
-                img={video.img}
-                video={video.videos[0]}
-                userName={video.userName}
-              />
-            </>
-          );
-        })}
+        <br />
+        <br />
+        <div className="profile_vd">
+          {data.map((video) => {
+            return (
+              <>
+                <Video_container
+                  key={video._id}
+                  id={video._id}
+                  name={video.name}
+                  date={video.createdAt}
+                  img={video.img}
+                  video={video.videos[0]}
+                  userName={video.userName}
+                />
+              </>
+            );
+          })}
+        </div>
       </div>
     </>
   );

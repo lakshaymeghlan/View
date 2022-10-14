@@ -10,12 +10,12 @@ export const sidebarData = [
     icons: <AiIcons.AiFillHome />,
     cName: "nav-text",
   },
-  {
-    title: "Liked Video",
-    path: "/like",
-    icons: <AiIcons.AiFillLike />,
-    cName: "nav-text",
-  },
+  // {
+  //   title: "Liked Video",
+  //   path: "/like",
+  //   icons: <AiIcons.AiFillLike />,
+  //   cName: "nav-text",
+  // },
   {
     title: "LogIn/Register",
     path: "/login",

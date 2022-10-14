@@ -1,9 +1,4 @@
-/* .profile_card{
-    justify-content: center;
-    display: grid;
-    position: relative;
-} */
-/* .profile_avatar{
+
+.profile_vd{
     display: flex;
-    z-index: 1;   
-} */
+}
