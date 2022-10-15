@@ -3,6 +3,8 @@ import * as MdIcons from "react-icons/md";
 import * as AiIcons from "react-icons/ai";
 import * as SiIcons from "react-icons/si";
 
+const user = JSON.parse(localStorage.getItem("user"));
+
 export const sidebarData = [
   {
     title: "Home",
@@ -16,12 +18,14 @@ export const sidebarData = [
   //   icons: <AiIcons.AiFillLike />,
   //   cName: "nav-text",
   // },
-  {
-    title: "LogIn/Register",
-    path: "/login",
-    icons: <SiIcons.SiGnuprivacyguard />,
-    cName: "nav-text",
-  },
+  user
+    ? { title: `Hi, ${user.name}`, path: "/" }
+    : {
+        title: "LogIn/Register",
+        path: "/login",
+        icons: <SiIcons.SiGnuprivacyguard />,
+        cName: "nav-text",
+      },
   {
     title: "Send feedback",
     path: "/feedback",
