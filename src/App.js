@@ -10,6 +10,7 @@ import Feedback from "./Components/Feedback/Feedback";
 import UploadVideo from "./Components/UploadVideo/UploadVideo";
 import ViewVideo from "./Components/ViewVideo/ViewVideo";
 import Profile from "./Components/Home/Profile";
+import Logout from "./Components/Login/Logout";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/uploadvideo" element={<UploadVideo />} />
           <Route path="/viewvideo/:id" element={<ViewVideo />} />
           <Route path="/profile/:id" element={<Profile />} />
+          <Route path="/logout" element={<Logout />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -135,3 +135,34 @@ label{
     font-size: 16px;
     margin-top: 15px;
   }
+
+  .logout_profile{
+    color: #366d6e;
+    padding: 5rem;
+  }
+
+  .name{
+    margin-bottom: 3rem;
+  }
+  .button_rev_out{
+    
+    background-color: #376f70;
+    border-radius: 100px;
+    /* box-shadow: rgba(44, 187, 111, 0.2) 0 -25px 18px -14px inset,rgba(44, 187, 111, 0.2) 0 1px 2px,rgba(44, 187, 111, 0.2) 0 2px 4px,rgba(44, 187, 111, 0.2) 0 4px 8px,rgba(44, 187, 111, 0.2) 0 8px 16px,rgba(44, 187, 111, 0.2) 0 16px 32px; */
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    margin-left: 9rem;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-right: 2rem;
+    margin-bottom: 3rem;
+  }

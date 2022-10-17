@@ -2,6 +2,7 @@ import React from "react";
 import * as MdIcons from "react-icons/md";
 import * as AiIcons from "react-icons/ai";
 import * as SiIcons from "react-icons/si";
+import * as FaIcons from "react-icons/fa";
 
 const user = JSON.parse(localStorage.getItem("user"));
 
@@ -19,7 +20,11 @@ export const sidebarData = [
   //   cName: "nav-text",
   // },
   user
-    ? { title: `Hi, ${user.name}`, path: "/" }
+    ? {
+        title: `Hi, ${user.name}`,
+        path: "/logout",
+        icons: <FaIcons.FaUserCheck />,
+      }
     : {
         title: "LogIn/Register",
         path: "/login",
